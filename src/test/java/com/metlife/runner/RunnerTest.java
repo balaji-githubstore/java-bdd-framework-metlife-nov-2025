@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 //        ,dryRun = true
 //        ,publish = true
         ,plugin = {"pretty","html:target/cucumber-report.html"}
-        ,tags = "@valid"
+//        ,tags = "@employee"
 )
 public class RunnerTest extends AbstractTestNGCucumberTests {
 

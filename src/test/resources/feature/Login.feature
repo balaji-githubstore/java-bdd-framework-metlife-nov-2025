@@ -22,7 +22,7 @@ Feature: Login
     Then User should not get access with error "<expected_error>"
     Examples:
       | username | password | expected_error      |
-      | saul     | saul123  | Invalid credentails |
-      | kim      | kim123   | Invalid credentails |
+      | saul     | saul123  | Invalid credentials |
+      | kim      | kim123   | Invalid credentials |
 
 
