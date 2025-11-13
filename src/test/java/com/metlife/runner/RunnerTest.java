@@ -6,11 +6,11 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = {"src/test/resources/feature/"}
-        ,glue = {"com.metlife.steps"}
+        ,glue = {"com.metlife.steps","com.metlife.hooks"}
 //        ,dryRun = true
 //        ,publish = true
         ,plugin = {"pretty","html:target/cucumber-report.html"}
-        ,tags = "@employee"
+        ,tags = "@valid"
 )
 public class RunnerTest extends AbstractTestNGCucumberTests {
 

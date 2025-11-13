@@ -20,6 +20,9 @@ public class AutomationHooks {
 
     @After
     public void teardown() {
-        driver.quit();
+        if(driver!=null)
+        {
+            driver.quit();
+        }
     }
 }

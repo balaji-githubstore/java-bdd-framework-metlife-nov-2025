@@ -14,8 +14,6 @@ public class LoginSteps {
 
     @Given("User have browser with OrangeHRM application")
     public void user_have_browser_with_orange_hrm_application() {
-
-
         AutomationHooks.driver.navigate().to("https://opensource-demo.orangehrmlive.com/");
 
     }
