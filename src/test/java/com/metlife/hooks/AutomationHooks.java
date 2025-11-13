@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class AutomationHooks {
-    public static WebDriver driver;
+    public WebDriver driver;
 
 
     @Before

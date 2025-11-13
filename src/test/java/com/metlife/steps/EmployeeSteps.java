@@ -9,10 +9,18 @@ import org.openqa.selenium.By;
 import java.util.List;
 import java.util.Map;
 
-public class EmployeeSteps {
+public class EmployeeSteps
+{
+    private AutomationHooks hooks;
+
+    public EmployeeSteps(AutomationHooks hooks)
+    {
+        this.hooks=hooks;
+    }
+
     @When("User click on PIM menu")
     public void user_click_on_pim_menu() {
-        AutomationHooks.driver.findElement(By.xpath("//span[normalize-space()='PIM']")).click();
+        hooks.driver.findElement(By.xpath("//span[normalize-space()='PIM']")).click();
     }
     @When("User click on Add Employee menu")
     public void user_click_on_add_employee_menu() {
