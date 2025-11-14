@@ -1,6 +1,9 @@
 package com.metlife.steps;
 
 import com.metlife.hooks.AutomationHooks;
+import com.metlife.pages.DashboardPage;
+import com.metlife.pages.MainPage;
+import com.metlife.pages.PIMPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,16 +14,20 @@ import java.util.Map;
 
 public class EmployeeSteps
 {
-    private AutomationHooks hooks;
+    private DashboardPage dashboardPage;
+    private PIMPage pimPage;
+    private MainPage mainPage;
 
-    public EmployeeSteps(AutomationHooks hooks)
+    public EmployeeSteps(DashboardPage dashboardPage,PIMPage pimPage,MainPage mainPage)
     {
-        this.hooks=hooks;
+        this.dashboardPage=dashboardPage;
+        this.pimPage=pimPage;
+        this.mainPage=mainPage;
     }
 
     @When("User click on PIM menu")
     public void user_click_on_pim_menu() {
-        hooks.driver.findElement(By.xpath("//span[normalize-space()='PIM']")).click();
+        mainPage.clickOnPimPage();
     }
     @When("User click on Add Employee menu")
     public void user_click_on_add_employee_menu() {
