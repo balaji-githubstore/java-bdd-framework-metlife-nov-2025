@@ -8,9 +8,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 
 public class LoginSteps  {
-
     private AutomationHooks hooks;
-
     public LoginSteps(AutomationHooks hooks)
     {
         this.hooks=hooks;
@@ -18,6 +16,7 @@ public class LoginSteps  {
 
     @Given("User have browser with OrangeHRM application")
     public void user_have_browser_with_orange_hrm_application() {
+
         hooks.driver.navigate().to("https://opensource-demo.orangehrmlive.com/");
     }
     @When("User enter username as {string}")
